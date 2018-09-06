@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, BrowserRouter as Router, withRouter, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar'
-import List from './components/List'
-import Homepage from './components/Homepage'
-import CalendarPage from './components/CalendarPage'
+import Navbar from '../components/Navbar'
+import List from '../components/List'
+import Homepage from '../components/Homepage'
+import CalendarPage from '../components/CalendarPage'
 
 class App extends Component {
   render() {
