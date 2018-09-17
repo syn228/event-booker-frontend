@@ -5,19 +5,21 @@ import Navbar from '../components/Navbar'
 import List from '../components/List'
 import Homepage from '../components/Homepage'
 import CalendarPage from '../components/CalendarPage'
+import Login from '../components/Login';
+import Dashboard from '../components/Dashboard';
+import About from '../components/About';
+import withAuthentication from '../containers/withAuthentication';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <React.Fragment>
-        <Navbar />
         <Switch>
-          <Route exact path="/home" component={Homepage} />   
-          <Route exact path="/calendar" component={(props) => <CalendarPage {...props} />} />
-          <Route exact path="/list" component={(props) => <List {...props} />} />
+          <Route path="/" exact component={Login} />
+          <Route path="/dashboard" component={withAuthentication(Dashboard)} />
+          <Route path="/calendar" component={CalendarPage} />
+          <Route path="/about" component={About} />
         </Switch>
-        </React.Fragment>
       </Router>
     );
   }
