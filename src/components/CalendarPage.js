@@ -12,13 +12,9 @@ class CalendarPage extends Component {
   
   handleChange = date => {
     this.setState({ date, change: true })
-    console.log("hit")
   }
 
   render() {
-    console.log("date", this.state.date._d)
-    console.log("date-type", typeof(this.state.date._d))
-    console.log("change", this.state.change)
     return (
       <div>
         <p> Please select a date!</p>
