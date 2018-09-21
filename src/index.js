@@ -4,8 +4,8 @@ import './index.css';
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router } from 'react-router-dom'
-import { createStore, applyMiddleware } from "redux"
-import reducer from "./src/reducer/reducer"
+import { createStore } from "redux"
+import reducer from "./reducer"
 import { Provider } from "react-redux"
 
 const store = createStore(reducer)
