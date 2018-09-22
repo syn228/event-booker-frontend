@@ -82,6 +82,7 @@ class Dashboard extends Component {
   });
 
   render() {
+    console.log(this.state.providerData)
     return (
       <Layout>
         <h1>Secure Area</h1>
